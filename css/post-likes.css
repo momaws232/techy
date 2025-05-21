@@ -1,0 +1,110 @@
+/* 
+ * Post Likes and Real-Time Updates CSS
+ */
+
+/* Like button styling */
+.post-footer {
+    padding-top: 10px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Popular Posts styling */
+.popular-post {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.popular-post:last-child {
+    border-bottom: none;
+}
+
+.popular-post h5 {
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.post-excerpt {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.post-meta {
+    font-size: 0.8rem;
+    color: #888;
+    display: flex;
+    justify-content: space-between;
+}
+
+body.dark-theme .post-excerpt {
+    color: #aaa;
+}
+
+body.dark-theme .post-meta {
+    color: #888;
+}
+
+body.dark-theme .popular-post {
+    border-bottom-color: rgba(255,255,255,0.1);
+}
+
+.post-likes {
+    display: flex;
+    align-items: center;
+}
+
+.like-button {
+    transition: all 0.2s ease;
+}
+
+.like-button:hover {
+    transform: scale(1.05);
+}
+
+.like-button:active {
+    transform: scale(0.95);
+}
+
+.like-button i {
+    margin-right: 3px;
+}
+
+/* New posts notification */
+#new-posts-notification {
+    animation: fadeIn 0.5s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    margin-bottom: 15px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dark mode adaptations */
+body.dark-theme .post-footer {
+    border-top-color: rgba(255,255,255,0.1);
+}
+
+body.dark-theme #new-posts-notification {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+body.dark-theme .like-button.btn-outline-primary {
+    color: #7c3aed;
+    border-color: #7c3aed;
+}
+
+body.dark-theme .like-button.btn-primary {
+    background-color: #7c3aed;
+    border-color: #7c3aed;
+}

@@ -1,0 +1,83 @@
+/* Admin view fixes */
+
+/* Remove the red stripe at the top of admin pages */
+body {
+    border-top: none !important;
+    margin-top: 0 !important;
+    padding-top: 56px !important;
+}
+
+/* Fix admin panel navbar */
+.navbar-admin {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+}
+
+/* Ensure content is not hidden behind the fixed navbar */
+.container-fluid {
+    margin-top: 20px;
+}
+
+/* Fix spacing in admin forms */
+.admin-form .form-group {
+    margin-bottom: 1rem;
+}
+
+/* Fix button alignments */
+.btn-group .btn {
+    margin-right: 2px;
+}
+
+/* Fix modal dialog alignment */
+.modal-dialog {
+    margin-top: 80px;
+}
+
+/* Fix sidebar padding on mobile */
+@media (max-width: 767.98px) {
+    #sidebar {
+        padding-top: 70px;
+    }
+}
+
+/* Admin Sidebar Fixes */
+
+/* Add padding to the top of the sidebar to accommodate the Admin Panel title */
+.sidebar {
+    padding-top: 60px !important;
+}
+
+/* Style the sidebar header and add space between it and nav items */
+.sidebar-header {
+    color: white;
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: inherit;
+}
+
+/* Make sure Dashboard is the first item with proper spacing */
+.sidebar .nav-item:first-of-type {
+    margin-top: 0.5rem;
+}
+
+/* Fix for the active nav item to ensure proper highlighting */
+.sidebar .nav-link.active {
+    background: linear-gradient(45deg, #4e73df, #2e59d9);
+    color: white;
+}
+
+/* Fix any possible overlapping with icons */
+.sidebar .nav-link i {
+    width: 20px;
+    text-align: center;
+    margin-right: 10px;
+} 

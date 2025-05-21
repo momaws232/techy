@@ -1,0 +1,248 @@
+/* Notification Cards Styling */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+:root {
+  --clr-blue: #5a81ff;
+  --clr-green: #2eea9d;
+  --clr-red: #fe6c9b;
+}
+
+.notify-card {
+  position: relative;
+  z-index: 555;
+  max-width: 38rem;
+  min-height: 15rem;
+  width: 90%;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  text-align: center;
+  box-shadow: 0.063em 0.75em 1.563em rgba(0, 0, 0, 0.25);
+  border-radius: 1rem;
+  font-family: "Poppins", sans-serif;
+  margin: 0 auto 1.5rem auto;
+}
+
+.notify-card-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0.8em 0.8em 0em 1.5em;
+}
+
+.notify-close {
+  color: #d9d9d9;
+  width: 1.5rem;
+  cursor: pointer;
+}
+
+.notify-card-body {
+  width: 100%;
+  padding: 0.7em 2em 0.5em 2em;
+  text-align: left;
+  display: flex;
+  text-align: unset;
+}
+
+.notify-icon {
+  width: 3rem;
+}
+
+@media screen and (min-width: 33.75rem) {
+  .notify-icon {
+    width: 4rem;
+  }
+}
+
+.notify-card-body > div {
+  margin-left: 2em;
+}
+
+.notify-card-body h3 {
+  text-align: left;
+  color: #fff;
+  font-size: 1.2rem;
+  letter-spacing: 0.035em;
+  margin-top: 0.625em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+.notify-card-body p {
+  text-align: left;
+  color: #cccccc;
+  font-size: 1rem;
+  letter-spacing: 0.031rem;
+}
+
+.notify-progress {
+  width: 100%;
+  margin-top: 0.938rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notify-progress > div {
+  width: 100%;
+}
+
+.notify-progress-bar {
+  position: relative;
+  width: 100%;
+  background: #363636;
+  height: 0.35rem;
+  display: block;
+  border-radius: 3.125rem;
+}
+
+.notify-progress-bar:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  display: block;
+  border-radius: 3.125rem;
+}
+
+.notify-progress span:first-of-type {
+  color: #cccccc;
+  text-align: right;
+  font-weight: 600;
+  width: 100%;
+  display: block;
+  margin-bottom: 0.313rem;
+  font-size: 0.9rem;
+}
+
+.notify-btn-first,
+.notify-btn-second {
+  background: #222127;
+  color: #fff;
+  border-radius: 0.25em;
+  padding: 0.625rem 2.2rem;
+  display: inline-block;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.notify-btn-second {
+  margin-left: 1rem;
+}
+
+/* Blue notification card */
+.notify-blue {
+  background: radial-gradient(
+    ellipse at right top,
+    #00458f8f 0%,
+    #151419 45%,
+    #151419 100%
+  );
+  opacity: 0.95;
+  transition: opacity 0.25s ease-in;
+}
+
+.notify-blue:hover {
+  opacity: 1;
+}
+
+.notify-blue .notify-icon {
+  color: var(--clr-blue);
+}
+
+.notify-blue .notify-progress-bar:after {
+  width: 100%;
+  background: var(--clr-blue);
+  background: linear-gradient(90deg, #1d1da3 0%, #4242cf 60%, #5a81ff 100%);
+}
+
+.notify-blue .notify-btn-first {
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+}
+
+.notify-blue .notify-btn-first:hover {
+  background: var(--clr-blue);
+}
+
+/* Green notification card */
+.notify-green {
+  background: radial-gradient(
+    ellipse at right top,
+    #107667ed 0%,
+    #151419 47%,
+    #151419 100%
+  );
+  opacity: 0.95;
+  transition: opacity 0.25s ease-in;
+}
+
+.notify-green:hover {
+  opacity: 1;
+}
+
+.notify-green .notify-icon {
+  color: var(--clr-green);
+}
+
+.notify-green .notify-btn-first:hover {
+  background: #ccff00;
+  color: #111;
+}
+
+.notify-green .notify-btn-second:hover {
+  background: var(--clr-green);
+}
+
+/* Red notification card */
+.notify-red {
+  background: radial-gradient(
+    ellipse at right top,
+    #a63d2a82 0%,
+    #151419 47%,
+    #151419 100%
+  );
+  opacity: 0.95;
+  transition: opacity 0.25s ease-in;
+}
+
+.notify-red:hover {
+  opacity: 1;
+}
+
+.notify-red .notify-icon {
+  color: var(--clr-red);
+}
+
+.notify-red .notify-btn-first:hover {
+  background: #ff6d57;
+  color: #111;
+}
+
+.notify-red .notify-btn-second:hover {
+  background: var(--clr-red);
+}
+
+/* Make sure notification cards work well in dark mode */
+body.dark-theme .notify-card {
+  box-shadow: 0.063em 0.75em 1.563em rgba(0, 0, 0, 0.5);
+}
+
+/* Fade out animation */
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; visibility: hidden; }
+}
+
+.notify-fade-out {
+  animation: fadeOut 1s ease-out forwards;
+  animation-delay: 5s;
+}

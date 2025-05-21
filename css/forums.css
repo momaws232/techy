@@ -1,0 +1,69 @@
+/* Forums Page Styles */
+
+/* Forum category headers */
+.forum-category-header {
+    padding: 15px;
+    margin: 0;
+    background-color: #000;
+    color: white;
+    border-radius: 5px 5px 0 0;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+/* Dark mode adjustments */
+body.dark-theme .forum-category-header {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+/* Forum icons */
+.forum-icon i {
+    font-size: 1.5rem;
+    color: #5e17eb;
+}
+
+body.dark-theme .forum-icon i {
+    color: #7c3aed;
+}
+
+/* Forum topics count badge */
+.forum-stats {
+    min-width: 80px;
+}
+
+/* Topic list styling */
+.topic-list {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.topic-list th {
+    background-color: #f4f4f4;
+    border-bottom: 2px solid #ddd;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.topic-list td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.topic-list tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Dark mode for topic list */
+body.dark-theme .topic-list th {
+    background-color: #252525;
+    border-color: #333;
+}
+
+body.dark-theme .topic-list td {
+    border-color: #333;
+}
+
+body.dark-theme .topic-list tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+} 

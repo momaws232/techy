@@ -1,0 +1,281 @@
+/* Dark Mode Styles */
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Basic elements */
+body.dark-theme .card,
+body.dark-theme .form-control,
+body.dark-theme .dropdown-menu,
+body.dark-theme .list-group,
+body.dark-theme .user-info,
+body.dark-theme .post-content,
+body.dark-theme .modal-content,
+body.dark-theme .breadcrumb,
+body.dark-theme .alert-info,
+body.dark-theme .post-preview,
+body.dark-theme table,
+body.dark-theme .table,
+body.dark-theme .table-bordered,
+body.dark-theme .forums-list,
+body.dark-theme .latest-topic,
+body.dark-theme .news-item {
+    background-color: #1e1e1e;
+    border-color: #333;
+    color: #e0e0e0;
+}
+
+/* Fix for dropdown menus */
+body.dark-theme .dropdown-menu {
+    background-color: #252525 !important;
+    border-color: #333 !important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5) !important;
+}
+
+body.dark-theme .dropdown-item {
+    color: #e0e0e0 !important;
+}
+
+body.dark-theme .dropdown-item:hover {
+    background-color: #333 !important;
+    color: #fff !important;
+}
+
+body.dark-theme .dropdown-divider {
+    border-color: #444 !important;
+}
+
+/* Fix for table striping in dark mode */
+body.dark-theme .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-theme .table-striped > tbody > tr:nth-of-type(even) {
+    background-color: #1e1e1e;
+}
+
+body.dark-theme .table-hover > tbody > tr:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Table elements in dark mode */
+body.dark-theme tr,
+body.dark-theme td,
+body.dark-theme th {
+    background-color: inherit !important;
+    color: #e0e0e0 !important;
+    border-color: #333 !important;
+}
+
+/* Navigation */
+body.dark-theme .navbar {
+    background-color: #0a0a0a !important;
+}
+
+body.dark-theme .dropdown-item {
+    color: #e0e0e0;
+}
+
+body.dark-theme .dropdown-item:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-theme .dropdown-divider {
+    border-color: #444;
+}
+
+/* Headers and tables */
+body.dark-theme .card-header,
+body.dark-theme .table thead th,
+body.dark-theme .table th {
+    background-color: #252525;
+    color: #e0e0e0;
+    border-color: #333;
+}
+
+body.dark-theme .table td {
+    border-color: #333;
+}
+
+/* Banner elements */
+body.dark-theme .welcome-banner,
+body.dark-theme .profile-header {
+    background: linear-gradient(120deg, #1a1a1a, #333333);
+    color: #e0e0e0;
+}
+
+/* Text elements */
+body.dark-theme .text-muted,
+body.dark-theme .breadcrumb-item,
+body.dark-theme .small,
+body.dark-theme small {
+    color: #aaa !important;
+}
+
+/* List items and forums */
+body.dark-theme .forum,
+body.dark-theme .list-group-item,
+body.dark-theme .post {
+    background-color: transparent;
+    border-color: #333;
+}
+
+body.dark-theme .forum:hover,
+body.dark-theme .list-group-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Active list items in dark mode */
+body.dark-theme .list-group-item.active {
+    background-color: #5e17eb !important;
+    border-color: #5e17eb !important;
+    color: white !important;
+}
+
+/* Fix for category headers in forums page */
+body.dark-theme h1, 
+body.dark-theme h2, 
+body.dark-theme h3 {
+    color: #e0e0e0;
+}
+
+/* Fix for hardware/software white background in forum categories */
+body.dark-theme .page-header h1,
+body.dark-theme .card-header h3 {
+    color: #e0e0e0 !important;
+}
+
+/* Dividers */
+body.dark-theme hr {
+    border-color: #444;
+    opacity: 0.3;
+}
+
+/* Footer */
+body.dark-theme footer {
+    background-color: #0a0a0a !important;
+}
+
+/* Form elements */
+body.dark-theme input,
+body.dark-theme textarea,
+body.dark-theme select,
+body.dark-theme .form-select,
+body.dark-theme .form-control {
+    background-color: #2d2d2d !important;
+    border-color: #444 !important;
+    color: #e0e0e0 !important;
+}
+
+/* Buttons */
+body.dark-theme .btn-outline-dark {
+    color: #e0e0e0;
+    border-color: #666;
+}
+
+body.dark-theme .btn-outline-dark:hover {
+    background-color: #444;
+    color: white;
+}
+
+body.dark-theme .btn-light,
+body.dark-theme .btn-outline-light {
+    background-color: #333 !important;
+    border-color: #444 !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-theme .btn-light:hover,
+body.dark-theme .btn-outline-light:hover {
+    background-color: #444 !important;
+}
+
+/* Pagination */
+body.dark-theme .page-link {
+    background-color: #1e1e1e;
+    border-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-theme .page-item.active .page-link {
+    background-color: #5e17eb;
+    border-color: #5e17eb;
+}
+
+/* Stat boxes */
+body.dark-theme .stat-box {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Links */
+body.dark-theme a {
+    color: #7c3aed;
+}
+
+body.dark-theme a:hover {
+    color: #9d5ffa;
+}
+
+/* Badges */
+body.dark-theme .badge.bg-secondary {
+    background-color: #444 !important;
+}
+
+/* Forum categories */
+body.dark-theme .forums-list,
+body.dark-theme .category h3 {
+    border-color: #333;
+}
+
+body.dark-theme .category h3 {
+    background-color: #252525;
+}
+
+/* Fix for white background in forum categories */
+body.dark-theme .card-header.bg-light,
+body.dark-theme .bg-light {
+    background-color: #252525 !important;
+    color: #e0e0e0;
+    border-color: #333;
+}
+
+body.dark-theme .forum {
+    border-color: #444;
+}
+
+body.dark-theme .forum:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Notification cards */
+body.dark-theme .notify-card {
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+/* Dark mode toggle icon */
+body.dark-theme #darkModeToggle .fa-sun {
+    color: #f5cd3d;
+}
+
+/* Improve input focus visibility */
+body.dark-theme .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(124, 58, 237, 0.25);
+    border-color: #7c3aed;
+}
+
+/* Forum and post content */
+body.dark-theme .post-body,
+body.dark-theme .topic-content {
+    color: #e0e0e0;
+}
+
+/* Code blocks in posts */
+body.dark-theme pre,
+body.dark-theme code {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+    border-color: #444;
+} 

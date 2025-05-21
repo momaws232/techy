@@ -1,0 +1,218 @@
+/* Admin Panel Styles */
+:root {
+    --primary: #4e73df;
+    --secondary: #6c757d;
+    --success: #1cc88a;
+    --info: #36b9cc;
+    --warning: #f6c23e;
+    --danger: #e74a3b;
+    --light: #f8f9fc;
+    --dark: #5a5c69;
+    --sidebar-width: 250px;
+    --sidebar-collapsed-width: 80px;
+}
+
+body {
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f8f9fc;
+}
+
+/* Wrapper */
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+/* Sidebar */
+#sidebar {
+    min-width: var(--sidebar-width);
+    max-width: var(--sidebar-width);
+    min-height: 100vh;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar.active {
+    min-width: var(--sidebar-collapsed-width);
+    max-width: var(--sidebar-collapsed-width);
+    text-align: center;
+}
+
+#sidebar.active .sidebar-header h3 {
+    display: none;
+}
+
+#sidebar.active .sidebar-header strong {
+    display: block;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+#sidebar ul li a:hover {
+    color: #fff;
+    background: #3a3f48;
+}
+
+#sidebar ul li.active > a {
+    color: #fff;
+    background: var(--primary);
+}
+
+#sidebar.active ul li a {
+    padding: 15px 10px;
+    text-align: center;
+    font-size: 0.85em;
+}
+
+#sidebar.active ul li a i {
+    margin-right: 0;
+    display: block;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #343a40;
+}
+
+#sidebar .sidebar-header strong {
+    display: none;
+    font-size: 1.8em;
+}
+
+/* Content */
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+#content.active {
+    margin-left: var(--sidebar-collapsed-width);
+    width: calc(100% - var(--sidebar-collapsed-width));
+}
+
+/* Card custom styles */
+.border-left-primary {
+    border-left: .25rem solid var(--primary) !important;
+}
+
+.border-left-success {
+    border-left: .25rem solid var(--success) !important;
+}
+
+.border-left-info {
+    border-left: .25rem solid var(--info) !important;
+}
+
+.border-left-warning {
+    border-left: .25rem solid var(--warning) !important;
+}
+
+.border-left-danger {
+    border-left: .25rem solid var(--danger) !important;
+}
+
+/* Utility classes */
+.text-xs {
+    font-size: .7rem;
+}
+
+.text-gray-300 {
+    color: #dddfeb !important;
+}
+
+.text-gray-800 {
+    color: #5a5c69 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #sidebar {
+        min-width: var(--sidebar-collapsed-width);
+        max-width: var(--sidebar-collapsed-width);
+    }
+    #content {
+        margin-left: var(--sidebar-collapsed-width);
+        width: calc(100% - var(--sidebar-collapsed-width));
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #content.active {
+        margin-left: 0;
+        width: 100%;
+    }
+    #sidebar .sidebar-header h3,
+    #sidebar .CTAs {
+        display: none;
+    }
+    #sidebar .sidebar-header strong {
+        display: block;
+    }
+    #sidebar ul li a {
+        padding: 20px 10px;
+        text-align: center;
+        font-size: 0.85em;
+    }
+    #sidebar ul li a span {
+        display: none;
+    }
+    #sidebar ul li a i {
+        margin-right: 0;
+        display: block;
+        font-size: 1.8em;
+        margin-bottom: 5px;
+    }
+}
+
+/* Form customization */
+.form-control:focus {
+    border-color: #bac8f3;
+    box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+}
+
+/* Table customization */
+.table th {
+    background-color: #f8f9fc;
+    border-top: none;
+}
+
+/* Badge customization */
+.badge {
+    font-size: 85%;
+    font-weight: normal;
+}
+
+/* Button shadow */
+.btn {
+    box-shadow: 0 .125rem .25rem 0 rgba(58, 59, 69, .2);
+}
+
+/* Card box shadow */
+.card {
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15);
+    border: none;
+    border-radius: 0.35rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-header {
+    background-color: #f8f9fc;
+    border-bottom: 1px solid #e3e6f0;
+    padding: 0.75rem 1.25rem;
+}

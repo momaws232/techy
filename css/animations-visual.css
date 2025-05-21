@@ -1,0 +1,57 @@
+/* Animated Circles Visual Effect */
+:root {
+  --circle-size: 15vmin;
+}
+
+.circles-animation {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 40vh;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.circles-container {
+  display: grid;
+  grid-template-columns: repeat(6, calc(var(--circle-size) / 2));
+  grid-template-rows: repeat(9, calc(var(--circle-size) / 2));
+}
+
+.circle-element {
+  position: relative;
+  grid-column: var(--x, 1);
+  grid-row: var(--y, 1);
+  
+  animation: circleAnim 10s calc(-1s * var(--x) * var(--y)) ease-in-out infinite;
+}
+
+.circle-element:after {
+  content: '';
+  
+  position: absolute;
+  top: calc(var(--circle-size) * -.25);
+  left: calc(var(--circle-size) * -.25);
+  
+  display: block;
+  width: var(--circle-size);
+  height: var(--circle-size);
+  border-radius: var(--circle-size);
+  
+  background: conic-gradient(from var(--r, 0deg), var(--circle-color, black), transparent 90%);
+  transform: rotate(-.01deg); /* pixel fix on window resize */
+}
+
+/* Dark mode compatibility */
+body.dark-theme .circle-element:after {
+  background: conic-gradient(from var(--r, 0deg), var(--circle-color, #7c3aed), transparent 90%);
+}
+
+@keyframes circleAnim {
+  50% {
+    filter: blur(1px);
+    scale: 1.1;
+    rotate: -1.5deg;
+  }
+}
